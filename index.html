@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>种梦 Seedream</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="种梦">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#F3F4F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F0F16" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one phone column — composer on top, live jobs, then a two-column contact sheet; a docked generate bar carries the price. */
+:root{
+  --bg:#F3F4F8; --panel:#FFFFFF; --sunk:#E9EAF1; --ink:#14141E; --muted:#5F6175; --line:#D9DAE4;
+  --accent:#3B36C9; --accent-soft:#E6E5FA; --on-accent:#FFFFFF;
+  --good:#17794B; --warn:#A6530B; --bad:#C0283B; --bad-soft:#FBE8EA;
+  --scrim:rgba(10,10,20,.55);
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Helvetica Neue","Microsoft YaHei",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --r:14px; --r-sm:9px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0F0F16; --panel:#191923; --sunk:#22222E; --ink:#ECECF5; --muted:#9C9DB2; --line:#2C2C3B;
+    --accent:#9089FF; --accent-soft:#25234A; --on-accent:#0F0F16;
+    --good:#4FC98D; --warn:#F2A55A; --bad:#FF7487; --bad-soft:#3A1A22;
+    --scrim:rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans);
+  padding-top:env(safe-area-inset-top,0px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-bottom:calc(132px + env(safe-area-inset-bottom,0px));}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.wrap{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px 4px}
+.brand{display:flex;align-items:baseline;gap:8px;min-width:0}
+.brand b{font-size:22px;letter-spacing:.02em}
+.brand span{font:500 12px var(--mono);color:var(--muted);letter-spacing:.04em}
+.top-right{display:flex;align-items:center;gap:8px}
+.spend{font:500 13px var(--mono);color:var(--muted);padding:6px 10px;border-radius:99px;background:var(--sunk);font-variant-numeric:tabular-nums}
+.icon-btn{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--sunk)}
+.icon-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8}
+
+/* composer */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:14px}
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--sunk);padding:4px;border-radius:12px}
+.model{padding:8px 4px 7px;border-radius:9px;text-align:center;display:flex;flex-direction:column;gap:1px}
+.model b{font-size:15px}
+.model small{font:12px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.model[aria-pressed="true"]{background:var(--panel);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.model[aria-pressed="true"] b{color:var(--accent)}
+.prompt-box{position:relative}
+textarea{width:100%;min-height:118px;resize:vertical;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg);color:var(--ink);
+  font:16px/1.55 var(--sans);padding:11px 12px}
+textarea::placeholder{color:var(--muted)}
+.prompt-meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:12px;color:var(--muted)}
+.linkish{color:var(--accent);font-size:13px}
+
+.field{display:flex;flex-direction:column;gap:8px}
+.field-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.label{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+.hint{font:12px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{min-width:52px;padding:7px 12px;border-radius:99px;border:1px solid var(--line);font:500 14px var(--mono)}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+
+.ratios{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-inline:-14px;padding-inline:14px;scroll-snap-type:x proximity;scrollbar-width:none}
+.ratios::-webkit-scrollbar{display:none}
+.ratio{flex:0 0 auto;scroll-snap-align:center;width:62px;padding:8px 0 6px;border-radius:10px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:6px}
+.ratio .shape-box{width:30px;height:30px;display:grid;place-items:center}
+.ratio .shape{border:1.6px solid currentColor;border-radius:2px}
+.ratio .shape.auto{width:22px;height:22px;border-style:dashed}
+.ratio span{font:500 11.5px var(--mono)}
+.ratio[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+
+.refs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.refs::-webkit-scrollbar{display:none}
+.ref-add{flex:0 0 auto;width:64px;height:64px;border-radius:10px;border:1.5px dashed var(--line);display:grid;place-items:center;color:var(--muted)}
+.ref-add svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.ref{flex:0 0 auto;position:relative;width:64px;height:64px}
+.ref img{width:64px;height:64px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.ref button{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:14px;line-height:22px;text-align:center}
+
+.seed-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.seed-row input{flex:1 1 140px;min-width:0;height:36px;border:1px solid var(--line);border-radius:99px;background:var(--bg);color:var(--ink);padding:0 14px;font:16px var(--mono)}
+.seed-row input:disabled{opacity:.55}
+.dice{height:36px;padding:0 12px;border-radius:99px;border:1px solid var(--line);font-size:13px}
+
+/* jobs */
+.jobs{display:flex;flex-direction:column;gap:10px}
+.job{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.job-top{display:flex;justify-content:space-between;gap:10px;font:500 13px var(--mono);font-variant-numeric:tabular-nums}
+.job-prompt{font-size:13px;color:var(--muted);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.bar{height:4px;border-radius:4px;background:var(--sunk);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:4px;transition:width 1s linear}
+.job.err{border-color:var(--bad);background:var(--bad-soft)}
+.job-err{font-size:14px;color:var(--ink)}
+.job-actions{display:flex;gap:8px}
+.btn{height:38px;padding:0 16px;border-radius:99px;border:1px solid var(--line);font-size:14px;font-weight:500;background:var(--panel)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.danger{color:var(--bad)}
+
+/* gallery */
+.gal-head{display:flex;justify-content:space-between;align-items:baseline;padding-top:6px}
+.gal-head h2{margin:0;font-size:17px}
+.sheet{columns:2;column-gap:8px}
+.tile{break-inside:avoid;margin-bottom:8px;position:relative;border-radius:10px;overflow:hidden;display:block;width:100%;background:var(--sunk)}
+.tile img{width:100%;height:auto}
+.tile .tag{position:absolute;left:6px;bottom:6px;font:500 10.5px var(--mono);padding:2px 6px;border-radius:6px;background:rgba(0,0,0,.55);color:#fff}
+.empty{border:1.5px dashed var(--line);border-radius:var(--r);padding:28px 18px;text-align:center;color:var(--muted);font-size:14px}
+
+/* dock */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);border-top:1px solid var(--line);
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.dock-in{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
+.notice{font-size:12.5px;color:var(--warn);text-align:center}
+.go{width:100%;height:52px;border-radius:14px;background:var(--accent);color:var(--on-accent);font-size:17px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px}
+.go small{font:500 14px var(--mono);opacity:.85;font-variant-numeric:tabular-nums}
+.go:disabled{opacity:.5}
+
+/* overlays */
+.overlay{position:fixed;inset:0;z-index:40;background:var(--scrim);display:flex;align-items:flex-end;justify-content:center}
+.sheet-card{background:var(--panel);width:100%;max-width:560px;max-height:92%;overflow-y:auto;border-radius:18px 18px 0 0;
+  padding:18px max(16px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  display:flex;flex-direction:column;gap:14px}
+.sheet-card h3{margin:0;font-size:18px}
+.sheet-card p{margin:0;font-size:14px;color:var(--muted)}
+.key-row{display:flex;gap:8px}
+.key-row input{flex:1;min-width:0;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);padding:0 12px;font:16px var(--mono)}
+.status{font-size:13px}
+.status.ok{color:var(--good)} .status.bad{color:var(--bad)}
+.rows{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.rows div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.rows dt,.rows .k{color:var(--muted)}
+.rows .v{font-family:var(--mono);text-align:right;word-break:break-all;font-variant-numeric:tabular-nums}
+.btn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn-grid .btn{width:100%}
+
+.viewer{position:fixed;inset:0;z-index:45;background:var(--bg);overflow-y:auto;
+  padding:calc(env(safe-area-inset-top,0px) + 10px) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.viewer-in{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.viewer-top{display:flex;justify-content:space-between;align-items:center}
+.viewer img{width:100%;border-radius:12px;-webkit-touch-callout:default}
+.viewer .full-prompt{font-size:14px;white-space:pre-wrap;word-break:break-word;background:var(--sunk);border-radius:10px;padding:10px 12px}
+
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(140px + env(safe-area-inset-bottom,0px));z-index:60;
+  background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:99px;font-size:14px;max-width:calc(100% - 32px);text-align:center}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><b>种梦</b><span>SEEDREAM 5.0</span></div>
+    <div class="top-right">
+      <span class="spend" id="spend" title="这台手机上累计花费">$0.000</span>
+      <button class="icon-btn" id="openSettings" aria-label="设置">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="panel" aria-label="生成设置">
+    <div class="models" id="models" role="group" aria-label="模型"></div>
+
+    <div class="prompt-box">
+      <textarea id="prompt" placeholder="描述你想要的画面，中文英文都行。比如：雨后的上海弄堂，傍晚，霓虹招牌倒映在积水里，胶片质感" aria-label="提示词"></textarea>
+      <div class="prompt-meta"><span id="promptCount">0 字</span><button class="linkish" id="clearPrompt">清空</button></div>
+    </div>
+
+    <div class="field">
+      <div class="field-head"><span class="label">参考图</span><span class="hint" id="refHint">0 / 14</span></div>
+      <div class="refs" id="refs"></div>
+      <input type="file" id="refFile" accept="image/*" multiple hidden>
+    </div>
+
+    <div class="field">
+      <div class="field-head"><span class="label">分辨率</span><span class="hint" id="resHint"></span></div>
+      <div class="seg" id="res" role="group" aria-label="分辨率"></div>
+    </div>
+
+    <div class="field">
+      <div class="field-head"><span class="label">比例</span><span class="hint" id="ratioHint"></span></div>
+      <div class="ratios" id="ratios" role="group" aria-label="比例"></div>
+    </div>
+
+    <div class="field">
+      <div class="field-head"><span class="label">张数</span><span class="hint" id="countHint"></span></div>
+      <div class="seg" id="count" role="group" aria-label="张数"></div>
+    </div>
+
+    <div class="field">
+      <div class="field-head"><span class="label">SEED</span><span class="hint" id="seedHint">每张随机，结果里会记下</span></div>
+      <div class="seed-row">
+        <div class="seg" id="seedMode" role="group" aria-label="Seed 模式"></div>
+        <input id="seed" inputmode="numeric" pattern="[0-9]*" placeholder="随机" aria-label="Seed 数值">
+        <button class="dice" id="dice">换一个</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="jobs" id="jobs" aria-live="polite"></section>
+
+  <section>
+    <div class="gal-head"><h2>出过的图</h2><span class="hint" id="galCount"></span></div>
+  </section>
+  <div class="sheet" id="gallery"></div>
+  <div class="empty" id="galEmpty">还没有图。出的图会保存在这台手机的这个页面里，点开可以存到相册、拿来当参考图，或者用同样的参数再来一张。</div>
+</div>
+
+<div class="dock">
+  <div class="dock-in">
+    <div class="notice" id="notice" hidden></div>
+    <button class="go" id="go"><span>生成</span><small id="price">$0.090</small></button>
+  </div>
+</div>
+
+<!-- settings -->
+<div class="overlay" id="settings" hidden>
+  <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="setTitle">
+    <div class="viewer-top"><h3 id="setTitle">设置</h3><button class="btn" id="closeSettings">完成</button></div>
+    <div class="field">
+      <span class="label">OPENROUTER API KEY</span>
+      <div class="key-row">
+        <input id="key" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-or-v1-…">
+        <button class="btn" id="toggleKey">显示</button>
+      </div>
+      <div class="key-row"><button class="btn primary" id="saveKey">保存并检查</button><button class="btn" id="forgetKey">删除 Key</button></div>
+      <div class="status" id="keyStatus"></div>
+      <p>Key 只保存在这台手机的这个页面里，只会发给 openrouter.ai。到 openrouter.ai/settings/keys 创建，建议给它设一个花费上限。</p>
+    </div>
+    <div class="field">
+      <span class="label">存储</span>
+      <div class="rows" id="storeRows"></div>
+      <div class="btn-grid"><button class="btn" id="persist">防止被系统清理</button><button class="btn danger" id="clearAll">清空全部历史</button></div>
+    </div>
+    <div class="field">
+      <span class="label">关于扣费和中断</span>
+      <p>生成要一分钟左右，期间请留在这个页面。切到别的 App 或锁屏，iOS 会断开请求。按 OpenRouter 的规则，没拿到图就不扣费。页面在生成时会尽量保持屏幕常亮。</p>
+    </div>
+  </div>
+</div>
+
+<!-- viewer -->
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-label="图片详情">
+  <div class="viewer-in">
+    <div class="viewer-top"><button class="btn" id="closeViewer">返回</button><span class="hint" id="vIndex"></span></div>
+    <img id="vImg" alt="生成的图片">
+    <p class="hint" style="margin:0;text-align:center">也可以长按图片 → 存储到"照片"</p>
+    <div class="btn-grid">
+      <button class="btn primary" id="vSave">存到相册 / 分享</button>
+      <button class="btn" id="vAsRef">当参考图</button>
+      <button class="btn" id="vReuse">用这组参数</button>
+      <button class="btn" id="vLock">锁定 seed 再来</button>
+      <button class="btn" id="vCopy">复制提示词</button>
+      <button class="btn danger" id="vDel">删除</button>
+    </div>
+    <div class="full-prompt" id="vPrompt"></div>
+    <div class="rows" id="vRows"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script>
+'use strict';
+const API = 'https://openrouter.ai/api/v1';
+const TIMEOUT_MS = 300000;      // 5 minutes
+const MEDIAN_S = 66;            // OpenRouter-reported P50 for Seedream 5.0 Pro
+const MAX_REFS = 14;
+const REF_MAX_SIDE = 2048;
+
+const MODELS = {
+  pro:   { id:'bytedance-seed/seedream-5-0-pro',   name:'Pro',   res:['1K','2K'], native:false, price:{'1K':0.045,'2K':0.09}, ref:0.003, approx:false },
+  flash: { id:'bytedance-seed/seedream-5-0-flash', name:'Flash', res:['1K','2K'], native:false, price:{'1K':0.018,'2K':0.018}, ref:0.003, approx:true },
+  lite:  { id:'bytedance-seed/seedream-5-0-lite',  name:'Lite',  res:['2K','4K'], native:true,  price:{'2K':0.035,'4K':0.035}, ref:0, approx:false }
+};
+const RATIOS = ['9:21','9:20','9:19.5','1:2','9:16','2:3','3:4','4:5','1:1','5:4','4:3','3:2','16:9','2:1','19.5:9','20:9','21:9','auto'];
+const RATIO_NAMES = {'9:19.5':'iPhone 全屏','9:20':'全面屏','9:21':'超长竖屏','9:16':'竖屏视频','3:4':'小红书','4:5':'Instagram','1:1':'正方形','16:9':'横屏','21:9':'带鱼屏','auto':'跟随参考图'};
+
+/* ---------- helpers ---------- */
+const $ = (s) => document.querySelector(s);
+const el = (tag, attrs={}, ...kids) => { const e=document.createElement(tag); for(const [k,v] of Object.entries(attrs)){ if(k==='class') e.className=v; else if(k==='text') e.textContent=v; else if(k.startsWith('on')) e.addEventListener(k.slice(2),v); else e.setAttribute(k,v);} for(const c of kids) if(c!=null) e.append(c); return e; };
+const LS = {
+  get(k,d){ try{ const v=localStorage.getItem(k); return v==null?d:JSON.parse(v); }catch{ return d; } },
+  set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch{} },
+  del(k){ try{ localStorage.removeItem(k); }catch{} }
+};
+const money = (n, d=3) => '$' + (Math.round(n*1000)/1000).toFixed(d);
+const randSeed = () => Math.floor(Math.random()*2147483647);
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+let toastTimer;
+function toast(msg, ms=2600){ const t=$('#toast'); t.textContent=msg; t.hidden=false; clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.hidden=true, ms); }
+
+/* ---------- state ---------- */
+const saved = LS.get('sp.settings', {});
+const state = {
+  model: MODELS[saved.model] ? saved.model : 'pro',
+  res: Object.assign({pro:'2K', flash:'2K', lite:'2K'}, saved.res||{}),
+  ratio: RATIOS.includes(saved.ratio) ? saved.ratio : '9:19.5',
+  count: [1,2,3,4].includes(saved.count) ? saved.count : 1,
+  seedMode: saved.seedMode === 'fixed' ? 'fixed' : 'random',
+  seed: saved.seed ?? '',
+  refs: []   // {id, dataUrl, thumb, bytes}
+};
+let key = LS.get('sp.key', '');
+let spend = LS.get('sp.spend', 0);
+let observed = LS.get('sp.prices', {});   // "pro|2K" -> USD per image actually charged
+let items = [];                          // history, newest first
+let jobs = [];                           // in-flight and failed requests
+const urlCache = new Map();
+function saveSettings(){ LS.set('sp.settings', {model:state.model,res:state.res,ratio:state.ratio,count:state.count,seedMode:state.seedMode,seed:state.seed}); }
+
+/* ---------- IndexedDB (images are too big for localStorage) ---------- */
+let dbp = null, dbOk = true;
+function idb(){
+  if(!dbp) dbp = new Promise((res,rej)=>{
+    const r = indexedDB.open('seedream-pocket', 1);
+    r.onupgradeneeded = () => { const d=r.result; if(!d.objectStoreNames.contains('items')) d.createObjectStore('items',{keyPath:'id'}); };
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+  return dbp;
+}
+async function tx(mode, fn){
+  const d = await idb();
+  return new Promise((res,rej)=>{
+    const t = d.transaction('items', mode); const s = t.objectStore('items'); let out;
+    const r = fn(s); if(r) r.onsuccess = () => { out = r.result; };
+    t.oncomplete = () => res(out); t.onerror = () => rej(t.error); t.onabort = () => rej(t.error);
+  });
+}
+const dbPut = (it) => tx('readwrite', s => s.put(it));
+const dbAll = () => tx('readonly', s => s.getAll());
+const dbDel = (id) => tx('readwrite', s => s.delete(id));
+const dbClear = () => tx('readwrite', s => s.clear());
+
+/* ---------- pricing ---------- */
+function perImage(m, r){
+  const o = observed[m+'|'+r];
+  if(typeof o === 'number') return {v:o, approx:false};
+  return {v:MODELS[m].price[r], approx:MODELS[m].approx};
+}
+function estimate(){
+  const m = MODELS[state.model], r = state.res[state.model];
+  const p = perImage(state.model, r);
+  const requests = m.native ? 1 : state.count;
+  const total = p.v*state.count + m.ref*state.refs.length*requests;
+  return {total, approx: p.approx || (state.model==='flash' && state.refs.length>0)};
+}
+
+/* ---------- render: controls ---------- */
+function renderModels(){
+  const box = $('#models'); box.replaceChildren();
+  for(const [k,m] of Object.entries(MODELS)){
+    const r = k===state.model ? state.res[k] : (m.res.includes('2K')?'2K':m.res[0]);
+    const p = perImage(k, r);
+    box.append(el('button',{class:'model','aria-pressed':String(k===state.model),onclick:()=>{ state.model=k; fixRes(); saveSettings(); renderAll(); }},
+      el('b',{text:m.name}), el('small',{text:(p.approx?'≈':'')+money(p.v)+' · '+r})));
+  }
+}
+function fixRes(){ const m=MODELS[state.model]; if(!m.res.includes(state.res[state.model])) state.res[state.model] = m.res.includes('2K')?'2K':m.res[0]; }
+function renderRes(){
+  const m = MODELS[state.model], box = $('#res'); box.replaceChildren();
+  for(const r of m.res){
+    box.append(el('button',{'aria-pressed':String(state.res[state.model]===r),text:r,onclick:()=>{ state.res[state.model]=r; saveSettings(); renderAll(); }}));
+  }
+  const p = perImage(state.model, state.res[state.model]);
+  $('#resHint').textContent = state.model==='lite' ? '2K / 4K 同价 ' + money(p.v) + '/张'
+    : state.model==='flash' ? (p.approx ? '2K 价格以首张实扣为准' : '实扣 ' + money(p.v) + '/张')
+    : money(perImage('pro','1K').v) + ' / ' + money(perImage('pro','2K').v) + ' 每张';
+}
+function shapeFor(r){
+  if(r==='auto') return el('i',{class:'shape auto'});
+  const [w,h] = r.split(':').map(Number); const max=24;
+  const sw = w>=h ? max : Math.max(6, Math.round(max*w/h)); const sh = h>=w ? max : Math.max(6, Math.round(max*h/w));
+  const s = el('i',{class:'shape'}); s.style.width=sw+'px'; s.style.height=sh+'px'; return s;
+}
+function renderRatios(scroll){
+  const box = $('#ratios'); box.replaceChildren();
+  for(const r of RATIOS){
+    const b = el('button',{class:'ratio','aria-pressed':String(state.ratio===r),'aria-label':r+(RATIO_NAMES[r]?' '+RATIO_NAMES[r]:''),
+      onclick:()=>{ state.ratio=r; saveSettings(); renderRatios(); renderPrice(); }},
+      el('span',{class:'shape-box'}, shapeFor(r)), el('span',{text:r}));
+    box.append(b);
+    if(scroll && state.ratio===r) requestAnimationFrame(()=>b.scrollIntoView({inline:'center',block:'nearest'}));
+  }
+  $('#ratioHint').textContent = RATIO_NAMES[state.ratio] || '';
+}
+function renderCount(){
+  const box = $('#count'); box.replaceChildren();
+  for(const n of [1,2,3,4]) box.append(el('button',{'aria-pressed':String(state.count===n),text:String(n),onclick:()=>{ state.count=n; saveSettings(); renderAll(); }}));
+  $('#countHint').textContent = state.count===1 ? '' : MODELS[state.model].native ? '一次请求出 '+state.count+' 张' : '同时发 '+state.count+' 个请求';
+}
+function renderSeed(){
+  const box = $('#seedMode'); box.replaceChildren();
+  for(const [k,t] of [['random','随机'],['fixed','固定']])
+    box.append(el('button',{'aria-pressed':String(state.seedMode===k),text:t,onclick:()=>{ state.seedMode=k; if(k==='fixed' && !String(state.seed).trim()) state.seed=String(randSeed()); saveSettings(); renderSeed(); }}));
+  const inp = $('#seed');
+  inp.disabled = state.seedMode==='random';
+  inp.value = state.seedMode==='random' ? '' : state.seed;
+  $('#dice').hidden = state.seedMode==='random';
+  $('#seedHint').textContent = state.seedMode==='random' ? '每张随机，结果里会记下'
+    : (state.count>1 && !MODELS[state.model].native ? '多张时依次 +1' : '同参数可大致复现，不保证一样');
+}
+function renderRefs(){
+  const box = $('#refs'); box.replaceChildren();
+  if(state.refs.length < MAX_REFS){
+    box.append(el('button',{class:'ref-add','aria-label':'添加参考图',onclick:()=>$('#refFile').click()},
+      svgIcon('M12 5v14M5 12h14')));
+  }
+  for(const r of state.refs){
+    box.append(el('div',{class:'ref'}, el('img',{src:r.thumb,alt:'参考图'}),
+      el('button',{'aria-label':'移除参考图',text:'×',onclick:()=>{ state.refs=state.refs.filter(x=>x!==r); renderRefs(); renderPrice(); }})));
+  }
+  const kb = state.refs.reduce((a,r)=>a+r.bytes,0)/1024;
+  const m = MODELS[state.model];
+  $('#refHint').textContent = state.refs.length + ' / ' + MAX_REFS + (state.refs.length ? ' · ' + (kb>1024?(kb/1024).toFixed(1)+'MB':Math.round(kb)+'KB') + (m.ref? ' · +'+money(m.ref)+'/张' : ' · 免费') : '');
+}
+function svgIcon(d){ const ns='http://www.w3.org/2000/svg'; const s=document.createElementNS(ns,'svg'); s.setAttribute('viewBox','0 0 24 24'); const p=document.createElementNS(ns,'path'); p.setAttribute('d',d); s.append(p); return s; }
+function renderPrice(){
+  const e = estimate();
+  $('#price').textContent = (e.approx?'≈':'') + money(e.total);
+  const pend = jobs.filter(j=>j.status==='pending').length;
+  $('#go').querySelector('span').textContent = pend ? '再生成' : '生成';
+}
+function renderSpend(){ $('#spend').textContent = money(spend); }
+function renderAll(){ renderModels(); renderRes(); renderRatios(); renderCount(); renderSeed(); renderRefs(); renderPrice(); }
+
+/* ---------- prompt ---------- */
+const promptEl = $('#prompt');
+promptEl.value = LS.get('sp.draft','');
+function updCount(){ $('#promptCount').textContent = promptEl.value.length + ' 字'; }
+updCount();
+let draftT; promptEl.addEventListener('input', ()=>{ updCount(); clearTimeout(draftT); draftT=setTimeout(()=>LS.set('sp.draft',promptEl.value),300); });
+$('#clearPrompt').onclick = () => { promptEl.value=''; LS.set('sp.draft',''); updCount(); promptEl.focus(); };
+$('#seed').addEventListener('input', e => { state.seed = e.target.value.replace(/\D/g,''); e.target.value = state.seed; saveSettings(); });
+$('#dice').onclick = () => { state.seed = String(randSeed()); saveSettings(); renderSeed(); };
+
+/* ---------- reference images ---------- */
+function loadImage(blob){
+  return new Promise((res,rej)=>{ const u=URL.createObjectURL(blob); const i=new Image(); i.onload=()=>{ URL.revokeObjectURL(u); res(i); }; i.onerror=()=>{ URL.revokeObjectURL(u); rej(new Error('图片读不出来')); }; i.src=u; });
+}
+function drawTo(img, maxSide, type, q){
+  const s = Math.min(1, maxSide/Math.max(img.naturalWidth, img.naturalHeight));
+  const c = document.createElement('canvas'); c.width=Math.round(img.naturalWidth*s); c.height=Math.round(img.naturalHeight*s);
+  const g = c.getContext('2d'); g.fillStyle='#fff'; g.fillRect(0,0,c.width,c.height); g.drawImage(img,0,0,c.width,c.height);
+  return c.toDataURL(type, q);
+}
+async function addRefFromBlob(blob){
+  if(state.refs.length >= MAX_REFS){ toast('最多 14 张参考图'); return false; }
+  const img = await loadImage(blob);
+  const dataUrl = drawTo(img, REF_MAX_SIDE, 'image/jpeg', 0.9);
+  const thumb = drawTo(img, 160, 'image/jpeg', 0.8);
+  const wasEmpty = state.refs.length === 0;
+  state.refs.push({id:uid(), dataUrl, thumb, bytes: Math.round((dataUrl.length - 23) * 3/4)});
+  if(wasEmpty && state.ratio === '9:19.5'){ state.ratio = 'auto'; saveSettings(); renderRatios(true); toast('比例已切到 auto，跟随参考图，可以再改'); }
+  return true;
+}
+$('#refFile').addEventListener('change', async (e) => {
+  const files = [...e.target.files]; e.target.value='';
+  for(const f of files){ try{ if(!(await addRefFromBlob(f))) break; }catch(err){ toast(err.message); } }
+  renderRefs(); renderPrice();
+});
+
+/* ---------- wake lock & backgrounding ---------- */
+let wakeLock = null;
+async function holdScreen(){
+  if(wakeLock || !('wakeLock' in navigator)) return;
+  try{ wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', ()=>{ wakeLock=null; renderNotice(); }); }catch{ wakeLock=null; }
+  renderNotice();
+}
+function releaseScreen(){ if(wakeLock){ wakeLock.release().catch(()=>{}); wakeLock=null; } }
+document.addEventListener('visibilitychange', () => {
+  const pend = jobs.filter(j=>j.status==='pending');
+  if(document.hidden){ pend.forEach(j=>j.wasHidden=true); }
+  else if(pend.length){ holdScreen(); toast('你刚才离开了页面，请求可能已被系统断开', 3200); }
+});
+function renderNotice(){
+  const n = jobs.filter(j=>j.status==='pending').length, box=$('#notice');
+  if(!n){ box.hidden=true; return; }
+  box.hidden=false;
+  box.textContent = '正在生成 ' + n + ' 个请求，请留在此页面' + (wakeLock ? '，屏幕会保持常亮' : '，别锁屏');
+}
+
+/* ---------- generation ---------- */
+function friendly(err, job){
+  if(err && err.name === 'AbortError'){
+    return job.timedOut ? '等了 5 分钟还没结果，已放弃。没拿到图不扣费。' : '已取消。';
+  }
+  if(err && typeof err.status === 'number'){
+    const m = err.message || '';
+    switch(err.status){
+      case 400: return '参数被拒绝：' + m;
+      case 401: return 'API Key 无效，请到设置里检查。';
+      case 402: return 'OpenRouter 余额不足，充值后再试。';
+      case 403: return 'Key 被禁用或已到花费上限：' + m;
+      case 404: return '模型暂时不可用：' + m;
+      case 413: return '请求太大，删掉几张参考图再试。';
+      case 429: return '请求太频繁，稍等一会儿再试。';
+      case 502: case 503: case 504: return '上游生成失败，这次不扣费。' + (m ? '（' + m + '）' : '');
+      default: return '出错了（' + err.status + '）：' + m;
+    }
+  }
+  if(job.wasHidden) return '生成时切到了后台或锁屏，连接被 iOS 断开了。没拿到图不扣费，留在这个页面再试一次。';
+  return '网络断了（可能是代理或线路问题），没拿到图不扣费。' + (err && err.message ? '（' + err.message + '）' : '');
+}
+async function b64ToBlob(b64, type){
+  b64 = b64.replace(/^data:[^,]*,/, '');
+  try{ return await (await fetch('data:'+type+';base64,'+b64)).blob(); }
+  catch{ const bin=atob(b64), u8=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u8[i]=bin.charCodeAt(i); return new Blob([u8],{type}); }
+}
+function buildRequests(){
+  const m = MODELS[state.model], r = state.res[state.model];
+  const prompt = promptEl.value.trim();
+  const refs = state.refs.map(x => ({type:'image_url', image_url:{url:x.dataUrl}}));
+  const base = {model:m.id, prompt, resolution:r, aspect_ratio:state.ratio};
+  if(refs.length) base.input_references = refs;
+  const fixed = state.seedMode==='fixed' && String(state.seed).trim() !== '' ? parseInt(state.seed,10) : null;
+  const meta = {mk:state.model, res:r, ratio:state.ratio, prompt, refsCount:refs.length};
+  if(m.native) return [{body:{...base, n:state.count, seed: fixed ?? randSeed()}, meta:{...meta, n:state.count}}];
+  return Array.from({length:state.count}, (_,i) => ({body:{...base, n:1, seed: fixed!=null ? (fixed+i)%2147483647 : randSeed()}, meta:{...meta, n:1}}));
+}
+$('#go').onclick = () => {
+  if(!key){ openSettings(); toast('先填 OpenRouter API Key'); return; }
+  if(!promptEl.value.trim()){ promptEl.focus(); toast('先写提示词'); return; }
+  const reqs = buildRequests();
+  for(const q of reqs){
+    const job = {id:uid(), status:'pending', started:Date.now(), body:q.body, meta:q.meta, wasHidden:false};
+    jobs.unshift(job); runJob(job);
+  }
+  holdScreen(); renderJobs(); renderPrice(); renderNotice(); startTicker();
+};
+async function runJob(job){
+  job.controller = new AbortController(); job.timedOut = false;
+  const t = setTimeout(()=>{ job.timedOut = true; job.controller.abort(); }, TIMEOUT_MS);
+  try{
+    const res = await fetch(API + '/images', {
+      method:'POST', signal:job.controller.signal,
+      headers:{'Authorization':'Bearer '+key, 'Content-Type':'application/json'},
+      body: JSON.stringify(job.body)
+    });
+    const text = await res.text();
+    let data = null; try{ data = JSON.parse(text); }catch{}
+    if(!res.ok || (data && data.error)){
+      throw {status: res.ok ? (Number(data.error.code)||502) : res.status, message: (data && data.error && data.error.message) || text.slice(0,200)};
+    }
+    const imgs = (data && data.data) || [];
+    if(!imgs.length) throw {status:502, message:'接口没有返回图片'};
+    const cost = data.usage && typeof data.usage.cost === 'number' ? data.usage.cost : null;
+    const each = cost != null ? cost / imgs.length : null;
+    if(cost != null){
+      spend += cost; LS.set('sp.spend', spend); renderSpend();
+      if(job.meta.refsCount === 0){ observed[job.meta.mk+'|'+job.meta.res] = each; LS.set('sp.prices', observed); }
+    }
+    for(let i=0;i<imgs.length;i++){
+      const type = imgs[i].media_type || 'image/png';
+      const blob = await b64ToBlob(imgs[i].b64_json, type);
+      let w=0,h=0; try{ const im = await loadImage(blob); w=im.naturalWidth; h=im.naturalHeight; }catch{}
+      const it = {id:uid(), created:Date.now(), model:job.meta.mk, res:job.meta.res, ratio:job.meta.ratio, seed:job.body.seed,
+        prompt:job.meta.prompt, refsCount:job.meta.refsCount, cost:each, type, blob, w, h, secs:Math.round((Date.now()-job.started)/1000)};
+      items.unshift(it);
+      if(dbOk) dbPut(it).catch(()=>{ dbOk=false; toast('历史保存失败，图片只在本次打开期间保留'); });
+    }
+    jobs = jobs.filter(j=>j!==job);
+    if(job.body.n > imgs.length) toast('只返回了 ' + imgs.length + ' 张');
+    else toast('出图了' + (cost!=null ? ' · ' + money(cost) : ''));
+    renderGallery();
+  }catch(err){
+    job.status = 'error'; job.error = friendly(err, job);
+  }finally{
+    clearTimeout(t);
+    if(!jobs.some(j=>j.status==='pending')){ releaseScreen(); stopTicker(); }
+    renderJobs(); renderPrice(); renderNotice(); renderModels(); renderRes();
+  }
+}
+
+/* ---------- jobs list ---------- */
+let ticker = null;
+function startTicker(){ if(!ticker) ticker = setInterval(tickJobs, 1000); }
+function stopTicker(){ clearInterval(ticker); ticker = null; }
+function tickJobs(){
+  for(const j of jobs){
+    if(j.status!=='pending' || !j.node) continue;
+    const s = Math.round((Date.now()-j.started)/1000);
+    j.node.querySelector('[data-t]').textContent = s + 's';
+    j.node.querySelector('.bar i').style.width = Math.min(96, s/MEDIAN_S*85) + '%';
+  }
+}
+function jobLabel(j){ return MODELS[j.meta.mk].name + ' · ' + j.meta.res + ' · ' + j.meta.ratio + (j.meta.n>1 ? ' · ×'+j.meta.n : ''); }
+function renderJobs(){
+  const box = $('#jobs'); box.replaceChildren();
+  for(const j of jobs){
+    if(j.status === 'pending'){
+      j.node = el('div',{class:'job'},
+        el('div',{class:'job-top'}, el('span',{text:jobLabel(j)}), el('span',{'data-t':'',text:Math.round((Date.now()-j.started)/1000)+'s'})),
+        el('div',{class:'bar'}, el('i')),
+        el('div',{class:'job-prompt',text:j.meta.prompt}));
+    }else{
+      j.node = el('div',{class:'job err'},
+        el('div',{class:'job-top'}, el('span',{text:jobLabel(j)}), el('span',{text:'失败'})),
+        el('div',{class:'job-err',text:j.error}),
+        el('div',{class:'job-actions'},
+          el('button',{class:'btn primary',text:'重试',onclick:()=>{ j.status='pending'; j.started=Date.now(); j.wasHidden=false; runJob(j); holdScreen(); startTicker(); renderJobs(); renderNotice(); renderPrice(); }}),
+          el('button',{class:'btn',text:'关闭',onclick:()=>{ jobs=jobs.filter(x=>x!==j); renderJobs(); }})));
+    }
+    box.append(j.node);
+  }
+  tickJobs();
+}
+
+/* ---------- gallery ---------- */
+function urlFor(it){ if(!urlCache.has(it.id)) urlCache.set(it.id, URL.createObjectURL(it.blob)); return urlCache.get(it.id); }
+function renderGallery(){
+  const box = $('#gallery'); box.replaceChildren();
+  $('#galEmpty').hidden = items.length > 0;
+  const total = items.reduce((a,i)=>a+(i.cost||0),0);
+  $('#galCount').textContent = items.length ? items.length + ' 张 · ' + money(total) : '';
+  items.forEach((it, idx) => {
+    const img = el('img',{src:urlFor(it),alt:it.prompt.slice(0,60),loading:'lazy'});
+    if(it.w && it.h) img.style.aspectRatio = it.w + '/' + it.h;
+    box.append(el('button',{class:'tile','aria-label':'查看图片',onclick:()=>openViewer(idx)}, img,
+      el('span',{class:'tag',text:MODELS[it.model].name + ' ' + it.res})));
+  });
+}
+
+/* ---------- viewer ---------- */
+let vIdx = -1, delArmed = false;
+function openViewer(i){
+  vIdx = i; delArmed = false; const it = items[i];
+  $('#vImg').src = urlFor(it);
+  $('#vIndex').textContent = (i+1) + ' / ' + items.length;
+  $('#vPrompt').textContent = it.prompt;
+  $('#vDel').textContent = '删除';
+  const d = new Date(it.created);
+  const rows = [
+    ['模型', 'Seedream 5.0 ' + MODELS[it.model].name],
+    ['分辨率', it.res + (it.w ? ' · ' + it.w + '×' + it.h : '')],
+    ['比例', it.ratio],
+    ['Seed', String(it.seed)],
+    ['参考图', it.refsCount ? it.refsCount + ' 张' : '无'],
+    ['格式', it.type.replace('image/','').toUpperCase() + ' · ' + (it.blob.size/1048576).toFixed(1) + 'MB'],
+    ['花费', it.cost!=null ? money(it.cost, 4) : '未返回'],
+    ['用时', it.secs + 's'],
+    ['时间', d.toLocaleString('zh-CN',{hour12:false})]
+  ];
+  $('#vRows').replaceChildren(...rows.map(([k,v]) => el('div',{}, el('span',{class:'k',text:k}), el('span',{class:'v',text:v}))));
+  $('#viewer').hidden = false; $('#viewer').scrollTop = 0;
+}
+$('#closeViewer').onclick = () => { $('#viewer').hidden = true; };
+$('#vSave').onclick = async () => {
+  const it = items[vIdx]; const ext = it.type.split('/')[1] === 'jpeg' ? 'jpg' : (it.type.split('/')[1] || 'png');
+  const file = new File([it.blob], 'seedream-' + it.seed + '.' + ext, {type: it.type});
+  try{
+    if(navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file]}); return; }
+  }catch(e){ if(e && e.name === 'AbortError') return; }
+  const a = el('a',{href:urlFor(it),download:file.name}); document.body.append(a); a.click(); a.remove();
+  toast('如果没弹出保存，长按图片选"存储到照片"');
+};
+$('#vAsRef').onclick = async () => {
+  try{ if(await addRefFromBlob(items[vIdx].blob)){ renderRefs(); renderPrice(); $('#viewer').hidden = true; toast('已加入参考图'); window.scrollTo({top:0,behavior:'smooth'}); } }
+  catch(e){ toast(e.message); }
+};
+function applyParams(it, lockSeed){
+  state.model = it.model; state.res[it.model] = it.res; state.ratio = it.ratio;
+  state.seedMode = lockSeed ? 'fixed' : 'random'; if(lockSeed) state.seed = String(it.seed);
+  promptEl.value = it.prompt; LS.set('sp.draft', it.prompt); updCount();
+  saveSettings(); renderAll(); renderRatios(true);
+  $('#viewer').hidden = true; window.scrollTo({top:0,behavior:'smooth'});
+}
+$('#vReuse').onclick = () => { applyParams(items[vIdx], false); toast('参数已填好，seed 随机'); };
+$('#vLock').onclick = () => { applyParams(items[vIdx], true); toast('已锁定 seed ' + items[vIdx].seed + '，改提示词后生成'); };
+$('#vCopy').onclick = async () => {
+  try{ await navigator.clipboard.writeText(items[vIdx].prompt); toast('已复制'); }
+  catch{ const r=document.createRange(); r.selectNodeContents($('#vPrompt')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); toast('已选中，点"拷贝"即可'); }
+};
+$('#vDel').onclick = async () => {
+  if(!delArmed){ delArmed = true; $('#vDel').textContent = '再点一次删除'; return; }
+  const it = items[vIdx];
+  items.splice(vIdx,1); if(urlCache.has(it.id)){ URL.revokeObjectURL(urlCache.get(it.id)); urlCache.delete(it.id); }
+  if(dbOk) dbDel(it.id).catch(()=>{});
+  $('#viewer').hidden = true; renderGallery(); toast('已删除');
+};
+
+/* ---------- settings ---------- */
+function openSettings(){ $('#key').value = key; $('#key').type='password'; $('#toggleKey').textContent='显示'; $('#keyStatus').textContent=''; $('#settings').hidden=false; renderStore(); }
+$('#openSettings').onclick = openSettings;
+$('#closeSettings').onclick = () => { $('#settings').hidden = true; };
+$('#settings').addEventListener('click', e => { if(e.target.id === 'settings') $('#settings').hidden = true; });
+$('#toggleKey').onclick = () => { const k=$('#key'); k.type = k.type==='password' ? 'text' : 'password'; $('#toggleKey').textContent = k.type==='password' ? '显示' : '隐藏'; };
+$('#saveKey').onclick = async () => {
+  const v = $('#key').value.trim(); const st = $('#keyStatus');
+  if(!v){ st.className='status bad'; st.textContent='Key 是空的'; return; }
+  key = v; LS.set('sp.key', key);
+  st.className='status'; st.textContent='已保存，正在检查…';
+  try{
+    const r = await fetch(API + '/key', {headers:{'Authorization':'Bearer '+key}});
+    const j = await r.json().catch(()=>null);
+    if(!r.ok) throw new Error(r.status===401 ? 'Key 无效' : '检查失败（' + r.status + '）');
+    const d = (j && j.data) || {};
+    const parts = ['Key 可用'];
+    if(typeof d.usage === 'number') parts.push('已用 ' + money(d.usage, 2));
+    if(typeof d.limit_remaining === 'number') parts.push('上限还剩 ' + money(d.limit_remaining, 2));
+    else if(d.limit == null) parts.push('未设花费上限');
+    st.className='status ok'; st.textContent = parts.join(' · ');
+  }catch(e){
+    st.className='status bad';
+    st.textContent = (e instanceof TypeError) ? '已保存，但连不上 openrouter.ai，检查网络或代理' : e.message;
+  }
+};
+$('#forgetKey').onclick = () => { key=''; LS.del('sp.key'); $('#key').value=''; $('#keyStatus').className='status'; $('#keyStatus').textContent='Key 已删除'; };
+async function renderStore(){
+  const rows = [['历史', items.length + ' 张'], ['累计花费', money(spend)]];
+  try{ if(navigator.storage && navigator.storage.estimate){ const e = await navigator.storage.estimate(); rows.push(['占用空间', (e.usage/1048576).toFixed(1) + ' MB']); } }catch{}
+  try{ if(navigator.storage && navigator.storage.persisted){ rows.push(['防清理', (await navigator.storage.persisted()) ? '已开启' : '未开启']); } }catch{}
+  $('#storeRows').replaceChildren(...rows.map(([k,v]) => el('div',{}, el('span',{class:'k',text:k}), el('span',{class:'v',text:v}))));
+}
+$('#persist').onclick = async () => {
+  try{ const ok = navigator.storage && navigator.storage.persist ? await navigator.storage.persist() : false;
+    toast(ok ? '已开启，系统不会自动清理历史' : '系统没同意。添加到主屏幕后打开，历史会更稳'); }catch{ toast('这个浏览器不支持'); }
+  renderStore();
+};
+let clearArmed = false;
+$('#clearAll').onclick = async () => {
+  if(!clearArmed){ clearArmed = true; $('#clearAll').textContent = '再点一次清空'; setTimeout(()=>{ clearArmed=false; $('#clearAll').textContent='清空全部历史'; }, 4000); return; }
+  clearArmed = false; $('#clearAll').textContent = '清空全部历史';
+  items = []; urlCache.forEach(u=>URL.revokeObjectURL(u)); urlCache.clear();
+  if(dbOk) await dbClear().catch(()=>{});
+  renderGallery(); renderStore(); toast('历史已清空');
+};
+
+/* ---------- boot ---------- */
+(async function boot(){
+  renderAll(); renderRatios(true); renderSpend(); renderNotice();
+  try{
+    const all = await dbAll();
+    items = (all||[]).sort((a,b)=>b.created-a.created);
+  }catch{ dbOk = false; }
+  renderGallery();
+  if(!key) setTimeout(()=>{ openSettings(); }, 300);
+})();
+</script>
+</body>
+</html>
